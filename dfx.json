@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "nn_backend": {
+      "candid": "src/nn_backend/nn_backend.did",
+      "package": "nn_backend",
+      "type": "rust"
+    },
+    "nn_frontend": {
+      "dependencies": [
+        "nn_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/nn_frontend/src/index.html"
+      },
+      "source": [
+        "src/nn_frontend/assets",
+        "dist/nn_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
